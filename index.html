@@ -13,187 +13,49 @@
   
   <title>Frontend Mentor | Product preview card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+  <link rel="stylesheet" href="./styles.css">
 
-    :root {
-      --mobile: 375px;
-      --desktop: 1440px;
-
-      --dark-cyan: hsl(158, 36%, 37%);
-      --cream: hsl(30, 38%, 92%);
-
-      --very-dark-blue: hsl(212, 21%, 14%);
-      --dark-grayish-blue: hsl(228, 12%, 48%);
-      --white: hsl(0, 0%, 100%);
-    }
-
-    body {
-      margin: auto;
-      display: flex;
-      background-color: var(--cream);
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      width: 100vw;
-    }
-
-    p {
-      font-size: 14px
-    }
-
-    .card {
-      margin: 2rem;
-      background-color: var(--white);
-      /* width: var(--mobile); */
-      /* width: 100%; */
-      display: flex;
-      border-radius: .5rem;
-      overflow: hidden;
-      flex-direction: column;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    .card-preview img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .card-preview #desktop {
-      display: none;
-    }
-
-    .card .card-info {
-      padding: 1.5rem;
-    }
-    
-    @media screen and (min-width: 376px) {
-      .card-preview, .card-info, .card {
-        width: 50%;
-      }
-      .card {
-        /* width: var(--desktop); */
-        flex-direction: row !important;
-      }
-      .card-preview #desktop {
-        display: block;
-      }
-      .card-preview #mobile {
-        display: none;
-      }
-      /* .card:nth-child(1), .card:nth-child(2) {
-        height: 50%;
-      } */
-    }
-
-    .card-category {
-      letter-spacing: .25rem;
-      font-size: 75%;
-      font-family: 'Montserrat', sans-serif;
-      color: var(--dark-cyan);
-      font-weight: bold;
-    }
-
-    .card-title {
-      line-height: 1;
-      font-family: 'Fraunces', serif;
-      margin: 1rem 0;
-    }
-
-    .card-subtitle {
-      font-family: 'Montserrat', sans-serif;
-      color: var(--dark-cyan);
-      line-height: 1.5;
-    }
-
-    .card-price {
-      display: flex;
-      align-items: center;
-    }
-    
-    .card-price #after {
-      font-size: 2rem;
-      font-family: 'Fraunces', serif;
-      font-weight: bold;
-      color: var(--dark-cyan);
-    }
-
-    .card-price #before {
-      font-family: 'Montserrat', sans-serif;
-      text-decoration: line-through;
-      color: var(--dark-cyan);
-      margin-left: 1rem;
-      font-size: 80%;
-    }
-
-    .card-button {
-      font-family: 'Montserrat', sans-serif;
-      background-color: var(--dark-cyan);
-      border: none;
-      margin: 1rem 0;
-      border-radius: .25rem;
-      padding: .75rem 1rem;
-      color: var(--white);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      transition: .25s;
-    }
-
-    .card-button:hover {
-      cursor: pointer;
-      background-color: var(--very-dark-blue);
-    }
-
-    .card-button * {
-      margin: 0 .25rem;
-    }
-  </style>
 </head>
 <body>
 
-  <div class="card">
-    <div class="card-preview">
-      <img id="mobile" src="./images/image-product-mobile.jpg" alt="Product (Mobile)">
-      <img id="desktop" src="./images/image-product-desktop.jpg" alt="Product (Desktop)">
-    </div>
-    <div class="card-info">
-      <div class="card-category">PERFUME</div>
-
-      <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
-
-      <p class="card-subtitle">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-      Perfumer-Creator for the House of CHANEL.</p>
-
-      <div class="card-price">
-        <span id="after">
-          $149.99
-        </span>
-        <span id="before">
-          $169.99
-        </span>
+  <main>
+    <div class="card">
+      <div class="card-preview">
+        <img id="mobile" src="./images/image-product-mobile.jpg" alt="Product (Mobile)">
+        <img id="desktop" src="./images/image-product-desktop.jpg" alt="Product (Desktop)">
       </div>
+      <div class="card-info">
+        <div class="card-category">PERFUME</div>
 
-      <button class="card-button">
-        <img src="./images/icon-cart.svg" alt="cart">
-        <span>
-          Add to Cart
-        </span>
-      </button>
+        <h1 class="card-title">Gabrielle Essence Eau De Parfum</h1>
+
+        <p class="card-subtitle">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+
+        <div class="card-price">
+          <span id="after">
+            $149.99
+          </span>
+          <span id="before">
+            $169.99
+          </span>
+        </div>
+
+        <button class="card-button">
+          <img src="./images/icon-cart.svg" alt="cart">
+          <span>
+            Add to Cart
+          </span>
+        </button>
+      </div>
     </div>
-  </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.frontendmentor.io/profile/rizkiramadandi">Rizki Ramadandi</a>.
-  </div>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://www.frontendmentor.io/profile/rizkiramadandi">Rizki Ramadandi</a>.
+    </div>
+  </footer>
 </body>
 </html>
